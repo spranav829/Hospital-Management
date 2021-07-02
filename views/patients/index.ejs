@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All Patients</title>
+  </head>
+  <body>
+    <h1>All Patients are Here!!!</h1>
+    <ul>
+      <% for(let patient of patients){ %>
+        <li><a href="/patients/<%= patient._id %>"><%= patient.Patient_name %></a></li>
+      <%} %>
+    </ul>
+    <a href="/patients/new">Create another</a>
+  </body>
+</html>

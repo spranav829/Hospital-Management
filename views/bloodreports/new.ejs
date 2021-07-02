@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create Bills</title>
+  </head>
+  <body>
+<form  action="/patients/<%=id%>/bloodreports" method="post">
+<div>
+  <label for="_id">Test_id</label>
+  <input type="text" id="_id" name="_id">
+</div>
+<div>
+  <label for="Test_type">Test_type</label>
+  <input type="text" id="Test_type" name="Test_type">
+</div>
+<div>
+  <label for="Value">Value</label>
+  <input type="number" id="Value" name="Value">
+</div>
+<div>
+  <label for="Condition">Condition</label>
+  <input type="text" id="Condition" name="Condition">
+</div>
+<input type="submit">
+</form>
+
+  </body>
+</html>

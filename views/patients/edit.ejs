@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Patients</title>
+  </head>
+  <body>
+    <style media="screen">
+    body {
+    background-repeat: no-repeat;
+    background-size: 100%;
+  background-color: #F3FFBD;
+  color: black;
+  background-image: url('https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg?size=626&ext=jpg');
+  }
+  hr{
+  border-top-style:dotted;
+  border-bottom-style:none;
+  border-right-style:none;
+  border-left-style:none;
+  border-color: grey;
+  width-size:200px;
+  width:5%;
+  }
+  .loginform {
+    align:right;
+  box-shadow: 0 0 0 0.5rem grey;
+  border-radius: 15px;
+  font: bold 1rem sans-serif ;
+  margin: 5rem;
+  padding: 1rem;
+  outline-offset: 0.5rem;
+  text-align: center;
+  }
+
+  input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #fff5ea;
+  color: bold black;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: solid #4CAF50 5px;
+  }
+  input[type=number] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #fff5ea;
+  color: bold black;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: solid #4CAF50 5px;
+  }
+  input[type="submit" i] {
+    background-color: #4CAF50;
+  border: none;
+  border-radius: 25px;
+  color:  white;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+  a{
+    background-color: #4CAF50;
+  border: none;
+  border-radius: 25px;
+  color:  white;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+    </style>
+    <div class="loginform">
+<form  action="/patients/<%=patient._id%>?_method=PUT" method="post">
+<div>
+  <label for="Patient_name">Patient Name</label>
+  <input type="text" id="Patient_name" name="Patient_name" value="<%=patient.Patient_name%>">
+</div>
+<div>
+  <label for="Password">Password</label>
+  <input type="text" id="Password" name="Password" value="<%=patient.Password%>">
+</div>
+<div>
+  <label for="Phone_No">Phone_No</label>
+  <input type="number" id="Phone_No" name="Phone_No" value="<%=patient.Phone_No%>">
+</div>
+<div>
+  <label for="Address">Address</label>
+  <input type="text" id="Address" name="Address" value="<%=patient.Address%>">
+</div>
+
+<input type="submit">
+</form>
+</div>
+  </body>
+</html>

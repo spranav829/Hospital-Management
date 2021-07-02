@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <title>Home</title>
+</head>
+<style type="text/css">
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F3FFBD;
+    color: black;
+    background-image: url('https://rumourhasit.co.za/wp-content/uploads/2014/12/life-kingsbury-hospital-reception-5.jpg');
+  }
+  
+  hr {
+    border-top-style: dotted;
+    border-bottom-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-color: grey;
+    width: 200px;
+    width: 5%;
+  }
+  
+  .loginform {
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 4px 1.25em;
+    box-shadow: 0 0 0 0.5rem black;
+    border-radius: 15px;
+    font: bold 1rem sans-serif;
+    margin: 5rem;
+    padding: 0.5rem;
+    outline-offset: 0.5rem;
+    text-align: center;
+  }
+  
+  .banner {
+    width: 1450px;
+    height: 300px;
+  }
+  
+  input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #fff5ea;
+    color: bold black;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: solid #4CAF50 5px;
+  }
+  
+  input[type="submit"i] {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  marquee {
+    font-size: 40px;
+    font-family: Helvetica;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  a {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>
+<body>
+  <div align=center>
+    <img
+      src="
+    https://hosting.photobucket.com/images/i/spranav829/WhatsApp_Image_2020_10_26_at_4.51.25_PM.jpeg?width=285&height=175&fit=bounds&crop=fill"
+      alt="">
+    <hr>
+    <a href="/contact">About Us</a>
+    <a href="/aboutus">Contact</a>
+    <a href="/selfasses">Asses yourself</a>
+    <hr>
+  </div>
+  <div class="loginform">
+    <form action="/login" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username">
+      <br>
+      <label for="password">Password</label>
+      <input type="text" name="password" id="password"><br>
+      <input type="submit">
+      <a href="/patients/new">Sign Up </a><br><br>
+    </form>
+    <br>
+  </div>
+  <hr>
+  <marquee> Available Beds:<%= Math.floor((Math.random() * 500) + 1) %> Available
+    Ventilators:<%= Math.floor((Math.random() * 50) + 1) %> Available Kits:<%= Math.floor((Math.random() * 500) + 1) %>
+  </marquee>
+
+
+</body>
+
+</html>

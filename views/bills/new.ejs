@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create Bills</title>
+  </head>
+  <body>
+<form  action="/patients/<%=id%>/bills" method="post">
+<div>
+  <label for="_id">Bill_id</label>
+  <input type="text" id="_id" name="_id">
+</div>
+<div>
+  <label for="Date">Date_Of_Generation</label>
+  <input type="date" id="Date" name="Date">
+</div>
+<div>
+  <label for="Payment_mode">Payment_mode</label>
+  <input type="text" id="Payment_mode" name="Payment_mode">
+</div>
+<div>
+  <label for="Consultancy_fee">Consultancy_fee</label>
+  <input type="number" id="Consultancy_fee" name="Consultancy_fee">
+</div>
+<input type="submit">
+</form>
+
+  </body>
+</html>

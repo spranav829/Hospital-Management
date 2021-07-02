@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Details</title>
+  </head>
+  <script>
+  function printPage() {
+    window.print();
+  }
+  </script>
+  <style media="screen">
+  body {
+  background-repeat: no-repeat;
+  background-size: cover;
+background-color: #F3FFBD;
+color: black;
+background-image: url('https://wallpaperaccess.com/full/1282794.jpg');
+}
+h2{
+text-align: center;
+  background-color: #4CAF50;
+  width: 30%;
+border: none;
+border-radius: 25px;
+color:  white;
+font-weight: bold;
+padding: 10px 20px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+hr{
+border-top-style:dotted;
+border-bottom-style:none;
+border-right-style:none;
+border-left-style:none;
+border-color: grey;
+width-size:200px;
+width:5%;
+}
+li{
+  text-align: center;
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #fff5ea;
+  color: bold black;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: solid #4CAF50 5px;
+}
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+a{
+  background-color: #4CAF50;
+border: none;
+border-radius: 25px;
+color:  white;
+font-weight: bold;
+padding: 10px 20px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+  </style>
+  <body>
+    <h2>Patient Details</h2>
+    <ul class="no-bullets">
+      <li>Patient ID :<%= patient._id%></li>
+      <li>Name :<%= patient.Patient_name %></li>
+      <li>Phone No :<%= patient.Phone_No %></li>
+      <li>Address :<%= patient.Address %></li>
+    </ul>
+    <h2>Doctor</h2>
+    <ul class="no-bullets">
+        <% for(let doctor of patient.Doctor_idd) {%>
+        <li>Name: <%=doctor.D_Name%></li>
+        <li>Phone No: <%=doctor.Phone_No%></li>
+        <li>Gender: <%=doctor.Gender%></li>
+        <li>Speciality: <%=doctor.Speciality%></li>
+        <li>Address: <%=doctor.Address%></li>
+        <% } %>
+    </ul>
+    <h2>Report</h2>
+    <ul class="no-bullets">
+        <% for(let report of patient.Report_idd) {%>
+        <li>Report ID: <%=report._id%></li>
+        <li>Medical History: <%=report.Medical_History%></li>
+        <li>Date Of Entry: <%=report.Date_Of_Entry%></li>
+        <% } %>
+    </ul>
+    <h2>Bill Details</h2>
+    <ul class="no-bullets">
+        <% for(let bill of patient.Bill_idd) {%>
+        <li>Bill ID: <%=bill._id%></li>
+        <li>Date: <%=bill.Date%></li>
+        <li>Payment mode: <%=bill.Payment_mode%></li>
+        <li>Cost: Rs.<%=bill.Consultancy_fee%></li>
+        <% } %>
+    </ul>
+    <h2>Test Results</h2>
+    <ul class="no-bullets">
+        <% for(let test of patient.Bloodreport_idd) {%>
+        <li>Test ID: <%=test._id%></li>
+        <li>Test type: <%=test.Test_type%></li>
+        <li>Value: <%=test.Value%></li>
+        <li>Condition: <%=test.Condition%></li>
+        <% } %>
+    </ul>
+    <h2>Bed</h2>
+    <ul class="no-bullets">
+        <% for(let bed of patient.Bed_idd) {%>
+        <li>Bed ID: <%=bed._id%></li>
+        <li>Floor_no No: <%=bed.Floor_no%></li>
+        <li>Room No: <%=bed.Room_no%></li>
+        <% } %>
+    </ul>
+    <h2>Ventilator</h2>
+    <ul class="no-bullets">
+        <% for(let ventilator of patient.Ventilator_idd) {%>
+        <li>Ventilator ID: <%=ventilator._id%></li>
+        <li>In use(yes/no): <%=ventilator.In_use%></li>
+        <% } %>
+    </ul>
+    <h2>Coronakit</h2>
+    <ul class="no-bullets">
+        <% for(let coronakit of patient.Coronakit_idd) {%>
+        <li>Coronakit Id: <%=coronakit._id%></li>
+        <li>Payment Status: <%=coronakit.Payment_Status%></li>
+        <li>Cost: Rs.<%=coronakit.Cost%></li>
+        <% } %>
+    </ul>
+    <hr>
+    <a href="/patients/<%=patient._id%>/edit">Edit</a>
+    <a href="/">Go back </a>
+    <input type="button" value="Print this report" onclick="printPage()" />
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create Beds</title>
+  </head>
+  <body>
+<form  action="/patients/<%=id%>/beds" method="post">
+<div>
+  <label for="_id">Bed_id</label>
+  <input type="text" id="_id" name="_id">
+</div>
+<div>
+  <label for="Floor_no">Floor_no</label>
+  <input type="number" id="Floor_no" name="Floor_no">
+</div>
+<div>
+  <label for="Room_no">Room_no</label>
+  <input type="number" id="Room_no" name="Room_no">
+</div>
+
+<input type="submit">
+</form>
+
+  </body>
+</html>

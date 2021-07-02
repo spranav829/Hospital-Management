@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Asses yourself</title>
+  </head>
+  <style media="screen">
+  body {
+  background-repeat: no-repeat;
+  background-size: cover;
+background-color: #F3FFBD;
+color: black;
+background-image: url('https://images3.alphacoders.com/101/thumb-350-1010294.jpg');
+}
+hr{
+border-top-style:dotted;
+border-bottom-style:none;
+border-right-style:none;
+border-left-style:none;
+border-color: grey;
+width-size:200px;
+width:5%;
+}
+.loginform {
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 4px 1.25em;
+  align:center;
+box-shadow: 0 0 0 0.5rem grey;
+border-radius: 15px;
+font: bold 1rem sans-serif ;
+margin: 5rem;
+padding: 0.5rem;
+outline-offset: 0.5rem;
+text-align: center;
+}
+input[type=text] {
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: none;
+background-color: #fff5ea;
+color: bold black;
+box-sizing: border-box;
+border-radius: 25px;
+border: solid #4CAF50 5px;
+}
+input[type=number] {
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: none;
+background-color: #fff5ea;
+color: bold black;
+box-sizing: border-box;
+border-radius: 25px;
+border: solid #4CAF50 5px;
+}
+button{
+  background-color: #4CAF50;
+border: none;
+border-radius: 25px;
+color:  white;
+font-size: 17px;
+font-weight: bold;
+padding: 10px 20px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+label{
+  background-color: #4CAF50;
+  color: white;
+}
+marquee{
+  font-size: 40px;
+  font-family:sans-serif;
+  height: : 50px;
+  border-radius: 20px;
+  color: black;
+  background: rgba(0,0,0,0.2);
+}
+a{
+  background-color: #4CAF50;
+border: none;
+border-radius: 25px;
+color:  white;
+font-weight: bold;
+padding: 10px 20px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+  </style>
+  <body>
+<div class="loginform">
+  <form action="/selfasses" method="post">
+  <div>
+    <label for="Name">Patient Name</label>
+    <input type="text" id="Name" name="Name">
+  </div><div>
+    <label for="Age">Age</label>
+    <input type="number" id="Age" name="Age">
+  </div>  <div>
+    <label for="Gender">Gender</label>
+    <input type="text" id="Gender" name="Gender">
+  </div>
+<select class="" name="symptoms" id="symptoms">
+  <option value="cough">Cough</option>
+  <option value="fever">Fever</option>
+  <option value="breathingdifficulty">Breathing difficulty</option>
+  <option value="chestcongestion">Chest Congestion</option>
+</select>
+  <button type="submit" name="check" id="check">Check</button>
+  <a href="/">Home</a>
+  </form></div>
+<% if(m==null){%>
+<%}else{%>
+  <div id="mess" style="color:#ffffff00"><%=m%></div>
+<%}%>
+<script type="text/javascript">
+var ele =document.getElementById("mess");
+var message=ele.innerHTML;
+alert(message);
+</script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create Reports</title>
+  </head>
+  <body>
+<form  action="/patients/<%=id%>/reports" method="post">
+<div>
+  <label for="_id">Report_id</label>
+  <input type="text" id="_id" name="_id">
+</div>
+<div>
+  <label for="Date_Of_Entry">Date_Of_Entry</label>
+  <input type="date" id="Date_Of_Entry" name="Date_Of_Entry">
+</div>
+<div>
+  <label for="Medical_History">Medical_History</label>
+  <input type="text" id="Medical_History" name="Medical_History">
+</div>
+<input type="submit">
+</form>
+
+  </body>
+</html>
